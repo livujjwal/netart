@@ -3,16 +3,23 @@ import trophy from "./assets/trophy.png";
 import award from "./assets/award.png";
 import about from "./assets/about.png";
 import { FOOTER } from "./utils/constant";
+import { TiSocialFacebook } from "react-icons/ti";
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaGlobe } from "react-icons/fa6";
 function App() {
   return (
     <div className="flex-col w-screen items-center gap-4 bg-gradient-to-b from-[#fffffd] via-[#fffcd3] to-[#fef8a7]">
       <div className="w-full flex items-center justify-center">
         <img className="h-28 my-2" src={logo} alt="Logo" />
       </div>
-      <div className="flex w-full items-center justify-around h-[32rem] my-2">
-        <img className="h-full" src={trophy} alt="trophy" />
+      <div className="max-md:flex-col flex w-full items-center justify-around md:h-[32rem] my-2">
+        <img
+          className=" md:h-full h-72 max-md:mx-auto"
+          src={trophy}
+          alt="trophy"
+        />
 
-        <div className="flex-col items-center justify-between w-[60%] h-full">
+        <div className="flex-col items-center justify-between md:w-[60%] md:h-full w-[90%] max-md:mx-auto max-lg:my-8">
           <h1 className="font-semibold my-2">
             C.R.I. PUMPS WINS THE NATIONAL ENERGY CONSERVATION AWARD 2018 for
             the 4th time.
@@ -32,7 +39,7 @@ function App() {
               with IoT enabled control panel.{" "}
             </li>
           </ul>
-          <img className="h-72 my-2" src={award} alt="award" />
+          <img className="lg:h-72 md:h-64 my-2" src={award} alt="award" />
           <p className="text-sm ">
             Government of India has awarded the{" "}
             <span className="font-semibold">
@@ -50,7 +57,11 @@ function App() {
           RESULTING IN A CUMULATIVE SAVING OF MORE THAN 9,000 MILLION UNITS OF
           POWER FOR THE NATION.
         </h1>
-        <img className="h-72 mx-auto" src={about} alt="about" />
+        <img
+          className="md:h-72 max-md:w-[90%] mx-auto"
+          src={about}
+          alt="about"
+        />
         <p className="text-center">
           Valves - Pumps - Pipes - IoT Drives & Controllers - Wires & Cables -
           Solar Systems - Motors{" "}
@@ -71,15 +82,18 @@ function App() {
             </span>
           ))}
         </p>
-        <div className="bg-[#ec3237] w-[99%] mx-auto flex items-center justify-around px-4 py-6 m-2">
-          <div>
-            <p>Toll free 1800 2000 1234</p>
+        <div className="bg-[#ec3237] w-[99%] mx-auto max-md:flex-col flex items-center justify-around px-4 py-6 m-2 text-sm ">
+          <div className="flex items-center justify-center my-2">
+            <FaPhoneAlt size={20} className="inline" />
+            <p className="text-center">Toll free 1800 2000 1234</p>
           </div>
-          <div>
-            <p>www.facebook.com/cripumps</p>
+          <div className="flex items-center justify-center my-2">
+            <TiSocialFacebook size={20} className="inline" />
+            <p className="text-center">www.facebook.com/cripumps</p>
           </div>
-          <div>
-            <p>www.crigroups.com</p>
+          <div className="flex items-center justify-center my-2">
+            <FaGlobe size={20} className="inline" />
+            <p className="text-center">www.crigroups.com</p>
           </div>
         </div>
       </div>
